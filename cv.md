@@ -2,7 +2,7 @@
 
 ---
 
-# Osipchik Anton
+# Osipchyk Anton
 
 ### Junior Frontend Developer
 
