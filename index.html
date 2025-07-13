@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widt=evice-width, initial-scal=.0">
+    <title>Osipchyk Anton CV</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#contact">Contact</a></li>
+            <li class="nav__item"><a href="#about-me">About me</a></li>
+            <li class="nav__item"><a href="#skills">Skills</a></li>
+            <li class="nav__item"><a href="#strengths">Strengths</a></li>
+            <li class="nav__item"><a href="#code-example">Code</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
+            <li class="nav__item"><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <section class="page-title">
+        <figure class="figure">
+            <img src="images/avatar.png" class="photo" alt="Osipchyk Anton">
+        </figure>
+        <div>
+            <h1 class="main-title">Osipchyk <br>Anton</h1>
+            <p>Front-End developer</p>
+        </div>
+    </section>
+    <section class="about-me" id="about-me">
+        <h2 class="section-title">About me</h2>
+        <p>
+            I am a Front-end developer with 1.5 years of experience in creating SPAs using Typescript, React, Redux,
+            JavaScript, CSS, HTML.
+        </p>
+        <p> I am constantly developing my working technologies and expanding my technical
+            horizon towards Angular. I spend my free time reading technical literature ("Clean Code") and
+            documentation, and in my spare time I can solve problems on Codewars.
+        </p>
+        <p>
+            I am open to your suggestions.
+        </p>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <ul class="contact__list">
+            <li class="contact__item">
+                Discord: <br>
+                Osipchyk Anton (Anton-Osip)
+            </li>
+            <li class="contact__item">
+                Email:<a href="mailto:osipchika@gmail.com">osipchika@gmail.com</a>
+            </li>
+            <li class="contact__item">
+                Address:<br>
+                <span>Minsk, Belarus</span>
+            </li>
+        </ul>
+    </section>
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+        <ul class="education__list">
+            <li class="education__item">2021 <br> It-incubator <br>Front-end developer 2023 (JavaScript,
+                TypeScript, React, Redux (RTK Query)
+            </li>
+            <li class="education__item">2021 <br> RS-School «JavaScript / Front-end Course» <br>Front-end
+                developer 2023 (HTML, CSS, SCSS,TypeScript / JavaScript, Git / GitHub)
+            </li>
+            <li class="education__item">
+                2016-2021 <br>BELARUSIAN NATIONAL TECHNICAL UNIVERSITY
+            </li>
+            <li class="education__item">
+                2012-2016 <br>MINSK RADIOTECHNICAL COLLEGE
+            </li>
+        </ul>
+    </section>
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills__list">
+            <li>TypeScript / JavaScript (ECMAScript)</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Redux(Thunk) / Redux-ToolKit, RTK Query</li>
+            <li>React Hook Form, Formic, Yup, Zod</li>
+            <li>HTML, CSS, SASS (SCSS)</li>
+            <li>Storybook,</li>
+            <li>Styled-components,</li>
+            <li>AntDesigne, MaterialUI, Radix Primitives</li>
+            <li>Webpack / Gulp</li>
+            <li>Git / GitHub / GitLab</li>
+            <li>Adobe Photoshop, Figma</li>
+            <li>English - A2.</li>
+        </ul>
+    </section>
+    <section class="key-strengths" id="strengths">
+        <h2 class="section-title">Key strengths</h2>
+        <ul class="key-strengths__list">
+            <li>Responsible</li>
+            <li>Sociable</li>
+            <li>Quick learner</li>
+            <li>Goal-oriented</li>
+        </ul>
+    </section>
+    <section class="code-example" id="code-example">
+        <h2 class="section-title">Code example</h2>
+        <details>
+            <summary>From Shelter projects</summary>
+            <pre>
+              <code data-language="javascript">
+const headerBurger=document.querySelector('.header__burger')
+const mobileNav=document.querySelector('.mobile-nav')
+const navBg=document.querySelector('.nav__bg')
+const navItem=document.querySelectorAll('.mobile-nav .nav__item')
+const body=document.querySelector('body')
+
+const openMenu=()= {
+	headerBurger.classList.add('header__burger--active')
+	mobileNav.classList.add('mobile-nav--active')
+	body.style.overflow='hidden'
+}
+
+const closeMenu=()= {
+	headerBurger.classList.remove('header__burger--active')
+	mobileNav.classList.remove('mobile-nav--active')
+	body.style.overflow='scroll'
+}
+
+headerBurger.addEventListener('click', ()= {
+	headerBurger.classList.contains('header__burger--active')
+		? closeMenu()
+		: openMenu()
+})
+
+navBg.addEventListener('click', ()= {
+	closeMenu()
+})
+
+navItem.forEach(item= {
+	item.addEventListener('click', closeMenu)
+})
+
+window.addEventListener('resize', ()= {
+	if (window.innerWidth > 767) {
+		closeMenu()
+	}
+})
+              </code>
+            </pre>
+        </details>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="section-title">My projects</h2>
+        <ul class="projects__list">
+            <li class="projects__item">
+                <a href="https://anton-osip.github.io/shelter/pages/main.html"
+                   target="_blank">
+                    <img src="images/shelter.png" alt="Shelter" class="projects__image">
+                    <h3 class="projects__title">Shelter</h3>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a href="https://anton-osip.github.io/Coffee-house/home.html"
+                   target="_blank">
+                    <img src="images/coffee.png" alt="Coffee House" class="projects__image">
+                    <h3 class="projects__title">Coffee House</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer class="footer">
+    <a class="footer__github" href="https://github.com/Anton-Osip" target="_blank">
+        My GitHub
+    </a>
+    <p class="footer__year">2023</p>
+    <a class="footer__rsschool" href="https://rs.school/js/" target="_blank">
+        <img src="images/rs.svg" width="86" height="32" alt="RS School" >
+    </a>
+</footer>
+</body>
+</html>
